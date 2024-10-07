@@ -9,9 +9,7 @@ import ErrorBoundary from "./pages/error/ErrorBoundary"; // استيراد Error
 import Loader from "./component/loader/Loader"; // استيراد Loader
 import ErrorThrower from "./pages/error/ErrorThrower"; // استيراد مكون الخطأ
 import NotFound from "./pages/error/NotFound"; // استيراد صفحة 404
-import Login from "./component/logIn/Login"; // تأكد من المسار صحيح
-import Dashboard from "./component/logIn/Dashboard"; // تأكد من أن لديك Dashboard
-// استيراد المكونات المتأخرة
+
 const Projects = lazy(() => import("./pages/projectsPage/Projects"));
 const CvDetails = lazy(() => import("./pages/CV/CvDetails"));
 const InterviewQuestions = lazy(() => import("./pages/IQ/InterviewQuestions"));
@@ -32,10 +30,6 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/blog" element={<Blog />} />
-                {/* مسار الداش بورد */}
-                <Route path="/" exact component={Login} />
-                <Route path="/dashboard" component={Dashboard} />
-                {/* لاختبار ظهور اخطاء */}
                 <Route path="/error" element={<ErrorThrower />} />
                 <Route
                   path="/interview-questions"

@@ -35,30 +35,5 @@
     ></script>
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-    <script>
-      function onLoad() {
-        gapi.load("auth2", function () {
-          gapi.auth2.init({
-            client_id: "YOUR_CLIENT_ID", // استبدل YOUR_CLIENT_ID بمعرف العميل الخاص بك
-          });
-        });
-      }
-
-      function googleLogin() {
-        const auth2 = gapi.auth2.getAuthInstance();
-        auth2.signIn().then((response) => {
-          console.log("Logged in as: ", response.getBasicProfile().getName());
-          console.log("User Email: ", response.getBasicProfile().getEmail());
-        });
-      }
-
-      function googleLogout() {
-        const auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(() => {
-          console.log("User signed out.");
-        });
-      }
-    </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,38 +7,8 @@ import {
   faGithub,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import { auth, provider } from "./firebaseConfig"; // تأكد من المسار الصحيح
-import { signInWithPopup } from "firebase/auth"; // استيراد signInWithPopup
-import { useNavigate } from "react-router-dom"; // استخدام useNavigate
 
 function Navbar() {
-  const navigate = useNavigate(); // إنشاء navigate
-
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // حالة تسجيل الدخول
-
-  // التحقق من حالة تسجيل الدخول
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setIsLoggedIn(!!user); // تعيين الحالة بناءً على وجود المستخدم
-    });
-
-    return () => unsubscribe(); // إلغاء الاشتراك عند تفكيك المكون
-  }, []);
-
-  const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      console.log("User logged in successfully with Google!", result.user);
-      navigate("/dashboard"); // إعادة توجيه المستخدم إلى لوحة التحكم
-    } catch (error) {
-      console.error("Error signing in with Google:", error);
-    }
-  };
-
-  const handleLogout = async () => {
-    await auth.signOut(); // تسجيل الخروج
-    setIsLoggedIn(false); // تعيين الحالة إلى false بعد تسجيل الخروج
-  };
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -128,19 +98,6 @@ function Navbar() {
               WhatsApp
             </a>
           </div>
-          {/* زر تسجيل الدخول باستخدام Google يظهر فقط إذا لم يكن المستخدم مسجلاً */}
-          {!isLoggedIn ? (
-            <button
-              className="btn btn-primary ms-3"
-              onClick={handleGoogleLogin}
-            >
-              Login with Google
-            </button>
-          ) : (
-            <button className="btn btn-danger ms-3" onClick={handleLogout}>
-              Logout
-            </button>
-          )}
         </div>
       </div>
     </nav>
