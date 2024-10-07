@@ -1,0 +1,38 @@
+/* src/pages/error/NotFound.css */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* ملء الشاشة بالكامل */
+  padding: 20px;
+  background-color: #f0f4f8; /* لون خلفية ناعم */
+  color: #333; /* لون نص داكن */
+  text-align: center;
+}
+
+.not-found-title {
+  font-size: 6rem; /* حجم كبير للعنوان */
+  font-weight: bold; /* جعل الخط عريض */
+  color: #e74c3c; /* لون أحمر للعنوان */
+  margin: 0; /* إزالة الهامش */
+}
+
+.not-found-message {
+  font-size: 1.5rem; /* حجم نص متوسط */
+  margin-bottom: 20px; /* مساحة أسفل الرسالة */
+}
+
+.not-found-link {
+  padding: 10px 20px; /* مساحة داخلية للرابط */
+  background-color: #3498db; /* لون أزرق */
+  color: #fff; /* لون نص أبيض */
+  border: none;
+  border-radius: 5px; /* زوايا دائرية */
+  text-decoration: none; /* إزالة التسطير */
+  transition: background-color 0.3s ease; /* تأثير عند التمرير */
+}
+
+.not-found-link:hover {
+  background-color: #2980b9; /* لون أزرق داكن عند التمرير */
+}

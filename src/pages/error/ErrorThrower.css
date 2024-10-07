@@ -1,0 +1,31 @@
+/* src/pages/error/ErrorThrower.css */
+.error-thrower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* ملء الشاشة بالكامل */
+  background-color: #f8f9fa; /* لون خلفية خفيف */
+  color: #495057; /* لون نص داكن */
+  text-align: center;
+}
+
+.large-title {
+  font-size: 5rem; /* حجم كبير جدًا للعنوان */
+  margin-bottom: 20px; /* مساحة أسفل العنوان */
+  color: #0041b9; /* لون أحمر للعنوان */
+}
+
+.error-button {
+  padding: 10px 20px; /* مساحة داخلية للزر */
+  background-color: #dc3545; /* لون أحمر للزر */
+  color: #fff; /* لون نص أبيض */
+  border: none;
+  border-radius: 5px; /* زوايا دائرية */
+  cursor: pointer; /* تغيير شكل المؤشر عند المرور فوق الزر */
+  transition: background-color 0.3s ease; /* تأثير عند التمرير */
+}
+
+.error-button:hover {
+  background-color: #c82333; /* لون أحمر داكن عند التمرير */
+}

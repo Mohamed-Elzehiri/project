@@ -1,0 +1,23 @@
+.interview-questions {
+  padding: 20px;
+}
+
+.faq-section {
+  background-color: #f8f9fa; /* لون خلفية فاتح */
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.faq-question {
+  font-weight: bold;
+}
+
+.faq-answer {
+  margin: 0;
+  padding-left: 10px;
+}

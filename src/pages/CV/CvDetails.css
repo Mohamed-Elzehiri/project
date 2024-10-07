@@ -1,0 +1,19 @@
+.cv-details {
+  background-color: #f8f9fa; /* لون خلفية فاتح */
+  border-radius: 10px; /* تقريبات الزوايا */
+  padding: 20px; /* حواف داخلية */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.cv-details h1,
+.cv-details h2 {
+  color: #343a40; /* لون النص */
+}
+
+.cv-details p {
+  line-height: 1.6; /* زيادة تباعد الأسطر */
+}
+
+.cv-details .list-inline-item {
+  margin-right: 10px; /* مساحة بين المهارات */
+}

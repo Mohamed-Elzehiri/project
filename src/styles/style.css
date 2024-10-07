@@ -1,0 +1,76 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #f8f9fa; /* لون خلفية فاتح */
+  font-family: Arial, sans-serif; /* نوع الخط */
+}
+
+.navbar {
+  padding: 10px 0; /* إضافة مساحة عمودية للـ Navbar */
+}
+
+.nav-link {
+  margin-right: 10px; /* مساحة بين روابط التنقل */
+  font-size: 20px; /* حجم النص */
+}
+
+.btn {
+  border-radius: 20px; /* تقريبات الزوايا */
+}
+
+/*///////////////////////////////*/
+
+.social-icons {
+  font-size: 1.5rem; /* تغيير حجم الأيقونات */
+}
+
+.social-icons .nav-link {
+  padding: 0.5rem; /* تحسين المساحة حول الأيقونات */
+}
+
+/*///////////////////////////////*/
+
+.wrapper {
+  min-height: 100vh; /* يجعل المحتوى يمتد حتى ارتفاع الصفحة */
+  display: flex;
+  flex-direction: column; /* يسمح بتكديس العناصر في عمود */
+}
+
+.main {
+  flex: 1; /* يجعل المنطقة الرئيسية تأخذ كل المساحة المتاحة */
+}
+
+/*///////////////////////////////*/
+
+.cv-details {
+  padding: 20px;
+}
+
+.cv-details h1 {
+  margin-bottom: 20px;
+}
+
+.cv-details section {
+  margin-bottom: 20px;
+}
+
+/*///////////////////////////////*/
+
+/*///////////////////////////////*/
+
+footer {
+  margin-top: 20px; /* المسافة بين المحتوى والفوتر */
+}
+
+/*///////////////////////////////*/
+@media (max-width: 768px) {
+  .social-icons {
+    margin-top: 1rem; /* إضافة مساحة أعلى على الأجهزة المحمولة */
+    justify-content: center; /* توسيط الأيقونات */
+  }
+
+  .navbar .nav-link {
+    font-size: 16px; /* تصغير حجم النص على الشاشات الصغيرة */
+  }
+}

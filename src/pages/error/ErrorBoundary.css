@@ -1,0 +1,37 @@
+/* src/pages/error/ErrorBoundary.css */
+.error-boundary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* ملء الشاشة بالكامل */
+  padding: 20px;
+  background-color: #f8f9fa; /* لون خلفية خفيف */
+  color: #495057; /* لون نص داكن */
+  text-align: center;
+}
+
+.error-boundary h1 {
+  font-size: 4rem; /* حجم كبير للعنوان */
+  margin-bottom: 10px; /* مساحة أسفل العنوان */
+  color: #dc3545; /* لون أحمر للعنوان */
+}
+
+.error-boundary p {
+  font-size: 1.2rem; /* حجم نص متوسط */
+  margin-bottom: 20px; /* مساحة أسفل الفقرة */
+}
+
+.error-boundary a {
+  padding: 10px 20px; /* مساحة داخلية للرابط */
+  background-color: #007bff; /* لون أزرق */
+  color: #fff; /* لون نص أبيض */
+  border: none;
+  border-radius: 5px; /* زوايا دائرية */
+  text-decoration: none; /* إزالة التسطير */
+  transition: background-color 0.3s ease; /* تأثير عند التمرير */
+}
+
+.error-boundary a:hover {
+  background-color: #0056b3; /* لون أزرق داكن عند التمرير */
+}
